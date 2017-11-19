@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="index.js"></script>
+    <title>Document</title>
+    <script>
+        //solution 1
+        // window.onload = function () {
+        //     var elm = document.getElementsByClassName('remove');
+        //     for (var index = 0; index < elm.length; index++) {
+        //         const element = elm[index];
+        //         element.addEventListener('click', function() {
+        //             this.parentNode.remove();
+        //         });
+        //     }
+        // }
+
+
+        //solution 2
+        window.onload = function () {
+            var elm = document.getElementsByTagName('button');
+            for (let index = 0; index < elm.length; index++) {
+                const element = elm[index];
+                element.onclick = function(){
+                    this.parentNode.remove();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <div class="image">
+        <img src="https://goo.gl/2oZU2S" alt="First">
+        <button class="remove">X</button>
+    </div>
+    <div class="image">
+        <img src="https://goo.gl/tniGAc" alt="Second">
+        <button class="remove">X</button>
+    </div>
+
+</body>
+
+</html>
